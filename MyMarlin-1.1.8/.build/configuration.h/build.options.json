@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\libraries",
+  "customBuildProperties": "build.warn_data_percentage=75,runtime.tools.avr-gcc.path=C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\hardware\\tools\\avr,runtime.tools.avrdude.path=C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\hardware\\tools\\avr,runtime.tools.arduinoOTA.path=C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\hardware\\tools\\avr",
+  "fqbn": "arduino:avr:mega:cpu=atmega2560",
+  "hardwareFolders": "C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\hardware",
+  "otherLibrariesFolders": "C:\\Users\\Anthony\\Documents\\Arduino\\libraries",
+  "runtime.ide.version": "10600",
+  "sketchLocation": "c:\\Users\\Anthony\\Desktop\\Firmware3D\\Marlin-1.1.8\\Marlin-1.1.8\\Marlin\\Configuration.h",
+  "toolsFolders": "C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\tools-builder,C:\\Users\\Anthony\\Downloads\\arduino-1.8.5-windows\\arduino-1.8.5\\hardware\\tools\\avr"
+}
