@@ -343,7 +343,7 @@
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within the PID
 #if ENABLED(PIDTEMP)
-  //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
+  #define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
@@ -357,6 +357,14 @@
   // #define  DEFAULT_Ki 0.51
   // #define  DEFAULT_Kd 74.50
 
+
+ // Mine
+   #define  DEFAULT_Kp 12.84
+   #define  DEFAULT_Ki 0.62
+   #define  DEFAULT_Kd 66.01
+
+
+
   // CTC MK8 Extruder
   //#define  DEFAULT_Kp 19.86
   //#define  DEFAULT_Ki 1.0
@@ -364,10 +372,10 @@
 
     // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Ultimaker
-  #define  DEFAULT_Kp 22.2
-  #define  DEFAULT_Ki 1.08
-  #define  DEFAULT_Kd 114
+  // Ultimaker (old mine)
+//  #define  DEFAULT_Kp 22.2
+//  #define  DEFAULT_Ki 1.08
+//  #define  DEFAULT_Kd 114
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -393,7 +401,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -414,9 +422,11 @@
 
     //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 10.00
-  #define  DEFAULT_bedKi .023
-  #define  DEFAULT_bedKd 305.4
+
+  //Mine
+  #define  DEFAULT_bedKp 219.91
+  #define  DEFAULT_bedKi 40.67
+  #define  DEFAULT_bedKd 297.23
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -544,8 +554,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.29,80.29,2590,95}
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.74,78.74,2590,95}
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.29,80.29,2590,95}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.74,78.74,2590,95}
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -796,8 +806,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 180
-#define Y_BED_SIZE 170
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
