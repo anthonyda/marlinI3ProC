@@ -593,7 +593,7 @@
  * value set here, it may happen instantaneously.
  */
 #define DEFAULT_XJERK                 20.0
-#define DEFAULT_YJERK                 10.0
+#define DEFAULT_YJERK                 15.0
 #define DEFAULT_ZJERK                  0.4
 #define DEFAULT_EJERK                  5.0
 
