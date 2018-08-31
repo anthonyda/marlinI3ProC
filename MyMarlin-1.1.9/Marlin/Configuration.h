@@ -619,7 +619,7 @@
  * following movement settings. If fewer factors are given than the
  * total number of extruders, the last value applies to the rest.
  */
-//#define DISTINCT_E_FACTORS
+#define DISTINCT_E_FACTORS
 
 /**
  * Default Axis Steps Per Unit (steps/mm)
@@ -627,7 +627,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.29,80.29,2590,95}
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.74,80.29,2590,96.4}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,2590,96.4}
 
 /**
  * Default Max Feed Rate (mm/s)
