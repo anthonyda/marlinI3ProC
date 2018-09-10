@@ -26,7 +26,7 @@
  *
  * Modified 28 September 2010 by Mark Sproul
  * Modified 14 February 2016 by Andreas Hardtung (added tx buffer)
- * Modified 01 October 2017 by Eduardo José Tagle (added XON/XOFF)
+ * Modified 01 October 2017 by Eduardo JosÃ© Tagle (added XON/XOFF)
  */
 
 #ifndef _MARLINSERIAL_H_

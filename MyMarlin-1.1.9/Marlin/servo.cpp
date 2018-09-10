@@ -40,7 +40,7 @@
  * attach(pin, min, max) - Attach to a pin, setting min and max values in microseconds
  *                         Default min is 544, max is 2400
  *
- * write()               - Set the servo angle in degrees. (Invalid angles —over MIN_PULSE_WIDTH— are treated as µs.)
+ * write()               - Set the servo angle in degrees. (Invalid angles â€”over MIN_PULSE_WIDTHâ€” are treated as Âµs.)
  * writeMicroseconds()   - Set the servo pulse width in microseconds.
  * move(pin, angle)      - Sequence of attach(pin), write(angle), delay(SERVO_DELAY).
  *                         With DEACTIVATE_SERVOS_AFTER_MOVE it detaches after SERVO_DELAY.

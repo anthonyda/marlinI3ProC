@@ -92,7 +92,8 @@
 #define SDSS               53
 #define LED_PIN            13
 #define PS_ON_PIN          12
-#define SUICIDE_PIN        54   // Must be enabled at startup to keep power flowing
+// Must be enabled at startup to keep power flowing
+#define SUICIDE_PIN        54
 #define KILL_PIN           -1
 
 #if ENABLED(ULTRA_LCD)

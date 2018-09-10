@@ -87,4 +87,3 @@ void inline incremental_LSF(struct linear_fit_data *lsf, const float &x, const f
 int finish_incremental_LSF(struct linear_fit_data *);
 
 #endif
-

@@ -190,7 +190,7 @@ class Planner {
 
     static uint32_t max_acceleration_mm_per_s2[XYZE_N],    // (mm/s^2) M201 XYZE
                     max_acceleration_steps_per_s2[XYZE_N], // (steps/s^2) Derived from mm_per_s2
-                    min_segment_time_us;                   // (µs) M205 B
+                    min_segment_time_us;                   // (Âµs) M205 B
     static float max_feedrate_mm_s[XYZE_N],     // (mm/s) M203 XYZE - Max speeds
                  axis_steps_per_mm[XYZE_N],     // (steps) M92 XYZE - Steps per millimeter
                  steps_to_mm[XYZE_N],           // (mm) Millimeters per step
@@ -293,12 +293,12 @@ class Planner {
       #define MAX_FREQ_TIME_US (uint32_t)(1000000.0 / XY_FREQUENCY_LIMIT)
       // Old direction bits. Used for speed calculations
       static unsigned char old_direction_bits;
-      // Segment times (in µs). Used for speed calculations
+      // Segment times (in Âµs). Used for speed calculations
       static uint32_t axis_segment_time_us[2][3];
     #endif
 
     #if ENABLED(ULTRA_LCD)
-      volatile static uint32_t block_buffer_runtime_us; //Theoretical block buffer runtime in µs
+      volatile static uint32_t block_buffer_runtime_us; //Theoretical block buffer runtime in Âµs
     #endif
 
   public:
@@ -708,7 +708,7 @@ class Planner {
 
         if (was_enabled) ENABLE_STEPPER_DRIVER_INTERRUPT();
 
-        // To translate µs to ms a division by 1000 would be required.
+        // To translate Âµs to ms a division by 1000 would be required.
         // We introduce 2.4% error here by dividing by 1024.
         // Doesn't matter because block_buffer_runtime_us is already too small an estimation.
         bbru >>= 10;

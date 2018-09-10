@@ -21,7 +21,7 @@
  */
 
 /**
- * MKS GEN L – Arduino Mega2560 with RAMPS v1.4 pin assignments
+ * MKS GEN L â€“ Arduino Mega2560 with RAMPS v1.4 pin assignments
  */
 
 #if HOTENDS > 2 || E_STEPPERS > 2
