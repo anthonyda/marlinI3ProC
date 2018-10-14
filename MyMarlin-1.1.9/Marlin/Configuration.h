@@ -1038,14 +1038,14 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
+  #define GRID_MAX_POINTS_X 6
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION 15
   #define RIGHT_PROBE_BED_POSITION 185
   #define FRONT_PROBE_BED_POSITION 15
-  #define BACK_PROBE_BED_POSITION 90
+  #define BACK_PROBE_BED_POSITION 120 // 0 = front of bed
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -1105,12 +1105,12 @@
  * Override if the automatically selected points are inadequate.
  */
 #if ENABLED(AUTO_BED_LEVELING_3POINT) || ENABLED(AUTO_BED_LEVELING_UBL)
-  #define PROBE_PT_1_X 29
-  #define PROBE_PT_1_Y 10
+  #define PROBE_PT_1_X 15
+  #define PROBE_PT_1_Y 3
   #define PROBE_PT_2_X 69
   #define PROBE_PT_2_Y 50
-  #define PROBE_PT_3_X 175
-  #define PROBE_PT_3_Y 90
+  #define PROBE_PT_3_X 185
+  #define PROBE_PT_3_Y 120 //max is "BACK_PROBE_BED_POSITION"
 #endif
 
 /**
@@ -1163,7 +1163,7 @@
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2.2)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
