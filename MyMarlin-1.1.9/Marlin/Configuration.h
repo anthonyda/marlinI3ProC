@@ -795,8 +795,8 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 14  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 62  // Y offset: -front +behind [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 34  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -19  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER -0.75   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
@@ -1043,9 +1043,9 @@
 
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION 0
-  #define RIGHT_PROBE_BED_POSITION 185
-  #define FRONT_PROBE_BED_POSITION 63
-  #define BACK_PROBE_BED_POSITION 190 // 0 = front of bed
+  #define RIGHT_PROBE_BED_POSITION 200
+  #define FRONT_PROBE_BED_POSITION 0
+  #define BACK_PROBE_BED_POSITION 200 // 0 = front of bed
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -1076,7 +1076,7 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 15         // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 10         // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 7      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y 7
 
@@ -1105,12 +1105,12 @@
  * Override if the automatically selected points are inadequate.
  */
 #if ENABLED(AUTO_BED_LEVELING_3POINT) || ENABLED(AUTO_BED_LEVELING_UBL)
-  #define PROBE_PT_1_X 15
-  #define PROBE_PT_1_Y 65
+  #define PROBE_PT_1_X 35
+  #define PROBE_PT_1_Y 30
   #define PROBE_PT_2_X 100
   #define PROBE_PT_2_Y 120
-  #define PROBE_PT_3_X 185
-  #define PROBE_PT_3_Y 190 //max is "BACK_PROBE_BED_POSITION"
+  #define PROBE_PT_3_X 190
+  #define PROBE_PT_3_Y 180 //max is "BACK_PROBE_BED_POSITION"
 #endif
 
 /**
